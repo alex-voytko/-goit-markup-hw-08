@@ -120,6 +120,16 @@ ul {
   margin: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .header-container .header-wrapper .menu-button {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .header-container .header-wrapper .menu-button .icon-close-menu {
+    display: none;
+  }
+}
+
 .header-container .header-wrapper .contacts-list {
   display: -webkit-box;
   display: -ms-flexbox;

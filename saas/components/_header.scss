@@ -61,8 +61,17 @@
                         margin: 0;
                     }
                 }   
-            }
-        }    
+            } 
+        }
+        @media screen and (max-width: 767px) {
+            .menu-button{
+                background-color: transparent;
+                border-color: transparent;
+                .icon-close-menu{
+                    display: none;
+                }    
+            } 
+        }          
         .contacts-list{
             display: flex;
             align-items: center;
