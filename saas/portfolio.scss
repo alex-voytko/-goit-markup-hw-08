@@ -1,0 +1,15 @@
+
+// utils:
+@import "./utils/variables";
+
+// base:
+@import "./base/common";
+@import "./base/container";
+
+// components:
+@import "./components/header";
+@import "./components/header-portfolio";
+@import "./components/filter";
+@import "./components/projects-list";
+@import "./components/general-styles";
+@import "./components/footer"
