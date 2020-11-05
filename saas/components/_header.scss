@@ -62,16 +62,7 @@
                     }
                 }   
             } 
-        }
-        @media screen and (max-width: 767px) {
-            .menu-button{
-                background-color: transparent;
-                border-color: transparent;
-                .icon-close-menu{
-                    display: none;
-                }    
-            } 
-        }          
+        }       
         .contacts-list{
             display: flex;
             align-items: center;
@@ -105,6 +96,23 @@
                     }
                 }
             }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .menu-button{
+        background-color: transparent;
+        border-color: transparent;
+        .icon-close-menu{
+            display: none;
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .menu-button{
+        display: none;
+        .icon-close-menu{
+            display: none;
         }
     }
 }
