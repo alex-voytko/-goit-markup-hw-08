@@ -1,0 +1,31 @@
+.menu-button{
+  @media screen and (max-width: 767px) {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  background-origin: border-box;
+  border: none;
+  &:hover svg,
+  &:focus svg{
+    fill: $accent-color;
+  }
+  & .icon-menu{
+    display: block;
+  }
+  & .icon-close-menu{
+    display: none;
+  }
+  &.is-open .icon-menu {
+    display: none;
+  }
+  &.is-open .icon-close-menu {
+    display: block;
+  }
+}
+}
+.menu-button {
+    @media screen and (min-width: 768px) {
+    display: none;
+    }
+  }

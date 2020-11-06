@@ -14,16 +14,17 @@
     <header class="header-container">
         <div class="container">
             <div class="header-wrapper">
-                <a class="link" href="./index.html" aria-label="WebStudio">
+                <a class="link-logo" href="./index.html" aria-label="WebStudio">
                     <span class="web">Web<span class="header-studio">Studio</span></span>
                 </a>
                 <nav class="nav-container">
-                    <ul class="navigation-menu">
+                    <ul class="navigation-menu is-open" data-menu id="menu-container">
                         <li class="item active"><a href="./index.html" class="link active">Студия</a></li>
                         <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
                         <li class="item"><a href="" class="link">Контакты</a></li>
                     </ul>
-                    <button type="button" class="menu-button">
+                    <button type="button" class="menu-button is-open" aria-expanded="false" 
+                    aria-controls="menu-container" data-menu-button>
                         <svg width="40" height="40" aria-label="Переключатель мобильного меню">
                             <use href="./img/svg/sprite.svg#icon-close-menu" class="icon-close-menu"></use>
                             <use href="./img/svg/sprite.svg#icon-menu" class="icon-menu"></use>
@@ -62,7 +63,7 @@
                                     <use href="./img/svg/sprite.svg#icon-close-modal"></use>
                                 </svg>
                             </button>
-                            <h2>Оставьте свои данные, мы вам перезвоним</h2>
+                            <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
                             <form action="#">
                                 <div class="form-field">
                                     <label class="label" for="name">Имя</label>
@@ -347,5 +348,6 @@
         </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>

@@ -11,20 +11,27 @@
 <body>
 
     <!--Header container-->
-    <header class="header-container portfolio">
+    <header class="header-container">
         <div class="container">
             <div class="header-wrapper">
-                <a class="link" href="./index.html" aria-label="WebStudio">
+                <a class="link-logo" href="./index.html" aria-label="WebStudio">
                     <span class="web">Web<span class="header-studio">Studio</span></span>
                 </a>
-                 <nav class="nav-container">
-                    <ul class="navigation-menu">
-                        <li class="item"><a href="./index.html" class="link">Студия</a></li>
-                        <li class="item active"><a href="./portfolio.html" class="link active">Портфолио</a></li>
+                <nav class="nav-container">
+                    <ul class="navigation-menu is-open" data-menu>
+                        <li class="item active"><a href="./index.html" class="link">Студия</a></li>
+                        <li class="item"><a href="./portfolio.html" class="link active">Портфолио</a></li>
                         <li class="item"><a href="" class="link">Контакты</a></li>
                     </ul>
-                 </nav>
-                 <ul class="contacts-list">
+                    <button type="button" class="menu-button is-open" aria-expanded="false" 
+                    aria-controls="menu-container" data-menu-button>
+                        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                            <use href="./img/svg/sprite.svg#icon-close-menu" class="icon-close-menu"></use>
+                            <use href="./img/svg/sprite.svg#icon-menu" class="icon-menu"></use>
+                        </svg>
+                    </button>
+                </nav>
+                <ul class="contacts-list">
                      <li class="item">
                         <a href="info@example.com" class="link">
                             <svg width="16" height="12">
@@ -37,7 +44,7 @@
                                 <use href="./img/svg/sprite.svg#icon-smartphone"></use>
                             </svg>+38 096 111 11 11</a>
                     </li>
-                 </ul>
+                </ul>
             </div>
         </div>
     </header>
