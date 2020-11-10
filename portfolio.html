@@ -1,207 +1,379 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/portfolio.min.css">
-</head>
-<body>
-
-    <!--Header container-->
-    <header class="header-container">
-        <div class="container">
-            <div class="header-wrapper">
-                <a class="link-logo" href="./index.html" aria-label="WebStudio">
-                    <span class="web">Web<span class="header-studio">Studio</span></span>
-                </a>
-                <nav class="nav-container">
-                    <ul class="navigation-menu is-open" data-menu>
-                        <li class="item active"><a href="./index.html" class="link">Студия</a></li>
-                        <li class="item"><a href="./portfolio.html" class="link active">Портфолио</a></li>
-                        <li class="item"><a href="" class="link">Контакты</a></li>
-                    </ul>
-                    <button type="button" class="menu-button is-open" aria-expanded="false" 
-                    aria-controls="menu-container" data-menu-button>
-                        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                            <use href="./img/svg/sprite.svg#icon-close-menu" class="icon-close-menu"></use>
-                            <use href="./img/svg/sprite.svg#icon-menu" class="icon-menu"></use>
-                        </svg>
-                    </button>
-                </nav>
-                <ul class="contacts-list">
-                     <li class="item">
-                        <a href="info@example.com" class="link">
-                            <svg width="16" height="12">
-                                <use href="./img/svg/sprite.svg#icon-envelope"></use>
-                            </svg>info@example.com</a>
-                    </li>
-                     <li class="item">
-                        <a href="tel:+380961111111" class="link">
-                            <svg width="10" height="16" style="background-position: center;">
-                                <use href="./img/svg/sprite.svg#icon-smartphone"></use>
-                            </svg>+38 096 111 11 11</a>
-                    </li>
-                </ul>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/portfolio.min.css" />
+  </head>
+  <body>
+    <!-- шапка -->
+      <header class="page-header">
+        <div class="container header-box">
+          <nav class="navigation">
+            <a href="./index.html" class="logo"><span class="logo-part">Web</span>Studio</a>
+            <div class="menu-container" data-menu>
+              <ul class="nav-list">
+                <li>
+                  <a href="./index.html" class="nav-link">Студия</a>
+                </li>
+                <li>
+                  <a href="./portfolio.html" class="nav-link  current">Портфолио</a>
+                </li>
+                <li>
+                  <a href="" class="nav-link">Контакты</a>
+                </li>
+              </ul>
+      
+              <ul class="contacts">
+                <li>
+                  <a href="mailto:info@devstudio.com" class="contacts-link">
+                    <svg class="icon" width="16" height="12">
+                      <use href="./img/svg/symbol-defs.svg#envelope"></use>
+                    </svg>
+                    <p>info@devstudio.com</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+380961111111" class="contacts-link">
+                    <svg class="icon" width="10" height="16">
+                      <use href="./img/svg/symbol-defs.svg#smartphone"></use>
+                    </svg>
+                    <p>+38 096 111 11 11</p>
+                  </a>
+                </li>
+              </ul>
             </div>
+            <button type="button" class="menu-btn" aria-expanded="false" data-menu-button>
+              <svg class="menu-icon" width="40" height="40" aria-label="переключатель мобильного меню">
+                <use href="./img/svg/symbol-defs.svg#menu" class="open-icon"></use>
+                <use href="./img/svg/symbol-defs.svg#closemenu" class="close-icon"></use>
+              </svg>
+            </button>
+          </nav>
+      </header>
+    <!-- фильтры -->
+    <section class="section">
+      <div class="container portfolio-btn">
+        <h1 class="primary-title hidden">Портфолио</h1>
+        <!-- фильтры -->
+        <ul class="filter-buttons">
+          <li class="item">
+            <button type="button" class="btn">Все</button>
+          </li>
+          <li class="item">
+            <button type="button" class="btn">Веб-сайты</button>
+          </li>
+          <li class="item">
+            <button type="button" class="btn">Приложения</button>
+          </li>
+          <li class="item">
+            <button type="button" class="btn">Дизайн</button>
+          </li>
+          <li class="item">
+            <button type="button" class="btn">Маркетинг</button>
+          </li>
+        </ul>
+      </div>
+      <!-- примеры работ -->
+      <div class="container portfolio">
+        <ul class="examples">
+          <li class="examples-item">
+            <a href="" class="ex-link">
+              <div class="ex-img">
+              <picture class="img">
+                <source srcset="./img/port1/port1-1200.webp 1x, ./img/port1/port1-1200-2x.webp 2x"
+                  media="(min-width: 1200px)" type="image/webp">
+                <source srcset="./img/port1/port1-768.webp 1x, ./img/port1/port1-768-2x.webp 2x"
+                  media="(min-width: 768px)" type="image/webp">
+                <source srcset="./img/port1/port1-480.webp 1x, ./img/port1/port1-480-2x.webp 2x" type="image/webp">
+                <source srcset="./img/port1/port1-1200.jpg 1x, ./img/port1/port1-1200-2x.jpg 2x" media="(min-width: 1200px)">
+                <source srcset="./img/port1/port1-768.jpg 1x, ./img/port1/port1-768-2x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="./img/port1/port1-480.jpg 1x, ./img/port1/port1-480">
+                <img src="./img/port1/port1-1200.jpg" alt="best portfolio ever" >
+              </picture>
+                <p class="examples-overlay">
+                  Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
+                </p>
+              </div>
+              <div class="ex-meta"> 
+                <h2 class="examples-title">Технокряк</h2>
+                <p class="examples-category">Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+          <li class="examples-item">
+            <a href="" class="ex-link">
+              <div class="ex-img">
+                <picture class="img">
+                  <source srcset="./img/port2/port2-1200.webp 1x, ./img/port2/port2-1200-2x.webp 2x" media="(min-width: 1200px)"
+                    type="image/webp">
+                  <source srcset="./img/port2/port2-768.webp 1x, ./img/port2/port2-768-2x.webp 2x" media="(min-width: 768px)"
+                    type="image/webp">
+                  <source srcset="./img/port2/port2-480.webp 1x, ./img/port2/port2-480-2x.webp 2x" type="image/webp">
+                  <source srcset="./img/port2/port2-1200.jpg 1x, ./img/port2/port2-1200-2x.jpg 2x" media="(min-width: 1200px)">
+                  <source srcset="./img/port2/port2-768.jpg 1x, ./img/port2/port2-768-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./img/port2/port2-480.jpg 1x, ./img/port2/port2-480">
+                  <img src="./img/port2/port2-1200.jpg" alt="best portfolio ever">
+                </picture>
+                <p class="examples-overlay">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem cupiditate, libero provident laborum ullam, magnam cumque expedita aspernatur perspiciatis ea nihil excepturi omnis ipsam rem molestiae doloremque, consequatur facere earum?
+                </p>
+              </div>
+              <div class="ex-meta">
+                <h2 class="examples-title">Постер New Orlean vs Golden Star</h2>
+                <p class="examples-category">Дизайн</p>
+              </div>
+            </a>
+          </li>
+          <li class="examples-item">
+            <a href="" class="ex-link">
+              <div class="ex-img">
+                <picture class="img">
+                  <source srcset="./img/port3/port3-1200.webp 1x, ./img/port3/port3-1200-2x.webp 2x" media="(min-width: 1200px)"
+                    type="image/webp">
+                  <source srcset="./img/port3/port3-768.webp 1x, ./img/port3/port3-768-2x.webp 2x" media="(min-width: 768px)"
+                    type="image/webp">
+                  <source srcset="./img/port3/port3-480.webp 1x, ./img/port3/port3-480-2x.webp 2x" type="image/webp">
+                  <source srcset="./img/port3/port3-1200.jpg 1x, ./img/port3/port3-1200-2x.jpg 2x" media="(min-width: 1200px)">
+                  <source srcset="./img/port3/port3-768.jpg 1x, ./img/port3/port3-768-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./img/port3/port3-480.jpg 1x, ./img/port3/port3-480">
+                  <img src="./img/port3/port3-1200.jpg" alt="best portfolio ever">
+                </picture>
+                <p class="examples-overlay">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem cupiditate, libero provident laborum ullam, magnam cumque expedita aspernatur perspiciatis ea nihil excepturi omnis ipsam rem molestiae doloremque, consequatur facere earum?
+                </p>
+              </div>
+              <div class="ex-meta">
+                <h2 class="examples-title">Ресторан Seafood</h2>
+                <p class="examples-category">Приложение</p>
+              </div>
+            </a>
+          </li>
+          <li class="examples-item">
+            <a href="" class="ex-link">
+              <div class="ex-img">
+                <picture class="img">
+                  <source srcset="./img/port4/port4-1200.webp 1x, ./img/port4/port4-1200-2x.webp 2x" media="(min-width: 1200px)"
+                    type="image/webp">
+                  <source srcset="./img/port4/port4-768.webp 1x, ./img/port4/port4-768-2x.webp 2x" media="(min-width: 768px)"
+                    type="image/webp">
+                  <source srcset="./img/port4/port4-480.webp 1x, ./img/port4/port4-480-2x.webp 2x" type="image/webp">
+                  <source srcset="./img/port4/port4-1200.jpg 1x, ./img/port4/port4-1200-2x.jpg 2x" media="(min-width: 1200px)">
+                  <source srcset="./img/port4/port4-768.jpg 1x, ./img/port4/port4-768-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./img/port4/port4-480.jpg 1x, ./img/port4/port4-480">
+                  <img src="./img/port4/port4-1200.jpg" alt="best portfolio ever">
+                </picture>
+                <p class="examples-overlay">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem cupiditate, libero provident laborum ullam, magnam cumque expedita aspernatur perspiciatis ea nihil excepturi omnis ipsam rem molestiae doloremque, consequatur facere earum?
+                </p>
+              </div>
+              <div class="ex-meta">
+                <h2 class="examples-title">Проект Prime</h2>
+                <p class="examples-category">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+          <li class="examples-item">
+            <a href="" class="ex-link">
+              <div class="ex-img">
+                <picture class="img">
+                  <source srcset="./img/port5/port5-1200.webp 1x, ./img/port5/port5-1200-2x.webp 2x" media="(min-width: 1200px)"
+                    type="image/webp">
+                  <source srcset="./img/port5/port5-768.webp 1x, ./img/port5/port5-768-2x.webp 2x" media="(min-width: 768px)"
+                    type="image/webp">
+                  <source srcset="./img/port5/port5-480.webp 1x, ./img/port5/port5-480-2x.webp 2x" type="image/webp">
+                  <source srcset="./img/port5/port5-1200.jpg 1x, ./img/port5/port5-1200-2x.jpg 2x" media="(min-width: 1200px)">
+                  <source srcset="./img/port5/port5-768.jpg 1x, ./img/port5/port5-768-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./img/port5/port5-480.jpg 1x, ./img/port5/port5-480">
+                  <img src="./img/port5/port5-1200.jpg" alt="best portfolio ever">
+                </picture>
+                <p class="examples-overlay">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem cupiditate, libero provident laborum ullam, magnam cumque expedita aspernatur perspiciatis ea nihil excepturi omnis ipsam rem molestiae doloremque, consequatur facere earum?
+                </p>
+              </div>
+              <div class="ex-meta">
+                <h2 class="examples-title">Проект Boxes</h2>
+                <p class="examples-category">Приложение</p>
+              </div>
+            </a>
+          </li>
+          <li class="examples-item">
+            <a href="" class="ex-link">
+              <div class="ex-img">
+                <picture class="img">
+                  <source srcset="./img/port6/port6-1200.webp 1x, ./img/port6/port6-1200-2x.webp 2x" media="(min-width: 1200px)"
+                    type="image/webp">
+                  <source srcset="./img/port6/port6-768.webp 1x, ./img/port6/port6-768-2x.webp 2x" media="(min-width: 768px)"
+                    type="image/webp">
+                  <source srcset="./img/port6/port6-480.webp 1x, ./img/port6/port6-480-2x.webp 2x" type="image/webp">
+                  <source srcset="./img/port6/port6-1200.jpg 1x, ./img/port6/port6-1200-2x.jpg 2x" media="(min-width: 1200px)">
+                  <source srcset="./img/port6/port6-768.jpg 1x, ./img/port6/port6-768-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./img/port6/port6-480.jpg 1x, ./img/port6/port6-480">
+                  <img src="./img/port6/port6-1200.jpg" alt="best portfolio ever">
+                </picture>
+                <p class="examples-overlay">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem cupiditate, libero provident laborum ullam, magnam cumque expedita aspernatur perspiciatis ea nihil excepturi omnis ipsam rem molestiae doloremque, consequatur facere earum?
+                </p>
+              </div>
+              <div class="ex-meta">
+                <h2 class="examples-title">Inspiration has no Borders</h2>
+                <p class="examples-category">Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+          <li class="examples-item">
+            <a href="" class="ex-link">
+              <div class="ex-img">
+                <picture class="img">
+                  <source srcset="./img/port7/port7-1200.webp 1x, ./img/port7/port7-1200-2x.webp 2x" media="(min-width: 1200px)"
+                    type="image/webp">
+                  <source srcset="./img/port7/port7-768.webp 1x, ./img/port7/port7-768-2x.webp 2x" media="(min-width: 768px)"
+                    type="image/webp">
+                  <source srcset="./img/port7/port7-480.webp 1x, ./img/port7/port7-480-2x.webp 2x" type="image/webp">
+                  <source srcset="./img/port7/port7-1200.jpg 1x, ./img/port7/port7-1200-2x.jpg 2x" media="(min-width: 1200px)">
+                  <source srcset="./img/port7/port7-768.jpg 1x, ./img/port7/port7-768-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./img/port7/port7-480.jpg 1x, ./img/port7/port7-480">
+                  <img src="./img/port7/port7-1200.jpg" alt="best portfolio ever">
+                </picture>
+                <p class="examples-overlay">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem cupiditate, libero provident laborum ullam, magnam cumque expedita aspernatur perspiciatis ea nihil excepturi omnis ipsam rem molestiae doloremque, consequatur facere earum?
+                </p>
+              </div>
+              <div class="ex-meta">
+                <h2 class="examples-title">Издание Limited Edition</h2>
+                <p class="examples-category">Дизайн</p>
+              </div>
+            </a>
+          </li>
+          <li class="examples-item">
+            <a href="" class="ex-link">
+              <div class="ex-img">
+                <picture class="img">
+                  <source srcset="./img/port8/port8-1200.webp 1x, ./img/port8/port8-1200-2x.webp 2x" media="(min-width: 1200px)"
+                    type="image/webp">
+                  <source srcset="./img/port8/port8-768.webp 1x, ./img/port8/port8-768-2x.webp 2x" media="(min-width: 768px)"
+                    type="image/webp">
+                  <source srcset="./img/port8/port8-480.webp 1x, ./img/port8/port8-480-2x.webp 2x" type="image/webp">
+                  <source srcset="./img/port8/port8-1200.jpg 1x, ./img/port8/port8-1200-2x.jpg 2x" media="(min-width: 1200px)">
+                  <source srcset="./img/port8/port8-768.jpg 1x, ./img/port8/port8-768-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./img/port8/port8-480.jpg 1x, ./img/port8/port8-480">
+                  <img src="./img/port8/port8-1200.jpg" alt="best portfolio ever">
+                </picture>
+                <p class="examples-overlay">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem cupiditate, libero provident laborum ullam, magnam cumque expedita aspernatur perspiciatis ea nihil excepturi omnis ipsam rem molestiae doloremque, consequatur facere earum?
+                </p>
+              </div>
+              <div class="ex-meta">
+                <h2 class="examples-title">Проект LAB</h2>
+                <p class="examples-category">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+          <li class="examples-item">
+            <a href="" class="ex-link">
+              <div class="ex-img">
+                <picture class="img">
+                  <source srcset="./img/port9/port9-1200.webp 1x, ./img/port9/port9-1200-2x.webp 2x" media="(min-width: 1200px)"
+                    type="image/webp">
+                  <source srcset="./img/port9/port9-768.webp 1x, ./img/port9/port9-768-2x.webp 2x" media="(min-width: 768px)"
+                    type="image/webp">
+                  <source srcset="./img/port9/port9-480.webp 1x, ./img/port9/port9-480-2x.webp 2x" type="image/webp">
+                    <source srcset="./img/port9/port9-1200.jpg 1x, ./img/port9/port9-1200-2x.jpg 2x" media="(min-width: 1200px)">
+                    <source srcset="./img/port9/port9-768.jpg 1x, ./img/port9/port9-768-2x.jpg 2x" media="(min-width: 768px)">
+                    <source srcset="./img/port9/port9-480.jpg 1x, ./img/port9/port9-480">
+                  <img src="./img/port9/port9-1200.jpg" alt="best portfolio ever">
+                </picture>
+                <p class="examples-overlay">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem cupiditate, libero provident laborum ullam, magnam cumque expedita aspernatur perspiciatis ea nihil excepturi omnis ipsam rem molestiae doloremque, consequatur facere earum?
+                </p>
+              </div>
+              <div class="ex-meta">
+                <h2 class="examples-title">Business</h2>
+                <p class="examples-category">Приложение</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- футер -->
+    <footer>
+      <!-- адрес -->
+      <div class="container footer-box">
+        <div class="footer-address">
+          <a href="./index.html" class="logo"
+            ><span class="logo-part">Web</span>Studio</a
+          >
+          <address class="address-container">
+            <p class="text">г. Киев, пр-т Леси Украинки, 26</p>
+            <span class="footer-contacts">
+              <p class="text">info@example.com</p>
+              <p class="text">+38 099 111 11 11</p>
+            </span>
+          </address>
         </div>
-    </header>
-        
-            <main>
-    <!--Portfolio container-->
-      <section class="our-works-section">
-        <div class="container">
-          <h1 class="title">Наши работы</h1>
-          <ul class="category-choice">
-              <li class="item"><button type="button" class="portfolio-button">Все</button></li>
-              <li class="item"><button type="button" class="portfolio-button">Веб-сайты</button></li>
-              <li class="item"><button type="button" class="portfolio-button">Приложения</button></li>
-              <li class="item"><button type="button" class="portfolio-button">Дизайн</button></li>
-              <li class="item"><button type="button" class="portfolio-button">Маркетинг</button></li>
-          </ul>
-        <ul class="projects-list">
-            <li class="item">
-                <a href="">
-                <div class="pop-up-container">
-                <img src="./img/portfolio/img-1.jpg" alt="Технокряк">
-                <p>Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-                </div>
-                <div class="card-content">
-                <h2 class="project-title">Технокряк</h2>
-                <p>Веб-сайт</p></div></a>
-            </li>
-            <li class="item">
-                <a href="">
-                <div class="pop-up-container">
-                <img src="./img/portfolio/img-2.jpg" alt="Постер New Orlean vs Golden Star">
-                </div>
-                <div class="card-content">
-                <h2 class="project-title">Постер New Orlean vs Golden Star</h2>
-                <p>Дизайн</p></div></a>
-            </li>
-            <li class="item">
-                <a href="">
-                <div class="pop-up-container">
-                <img src="./img/portfolio/img-3.jpg" alt="Ресторан Seafood">
-                </div>
-                <div class="card-content">
-                <h2 class="project-title">Ресторан Seafood</h2>
-                <p>Приложение</p></div></a>
-            </li>
-            <li class="item">
-                <a href="">
-                <div class="pop-up-container">
-                <img src="./img/portfolio/img-4.jpg" alt="Проект Prime">
-                </div>
-                <div class="card-content">
-                <h2 class="project-title">Проект Prime</h2>
-                <p>Маркетинг</p></div></a>
-            </li>
-            <li class="item">
-                <a href="">
-                <div class="pop-up-container">
-                <img src="./img/portfolio/img-5.jpg" alt="Проект Boxes">
-                </div>
-                <div class="card-content">
-                <h2 class="project-title">Проект Boxes</h2>
-                <p>Приложение</p></div></a>
-            </li>
-            <li class="item">
-                <a href="">
-                <div class="pop-up-container">
-                <img src="./img/portfolio/img-6.jpg" alt="Inspiration has no Borders">
-                </div>
-                <div class="card-content">
-                <h2 class="project-title">Inspiration has no Borders</h2>
-                <p>Веб-сайт</p></div></a>
-            </li>
-            <li class="item">
-                <a href="">
-                <div class="pop-up-container">
-                <img src="./img/portfolio/img-7.jpg" alt="Издание Limited Edition">
-                </div>
-                <div class="card-content">
-                <h2 class="project-title">Издание Limited Edition</h2>
-                <p>Дизайн</p></div></a>
-            </li>
-            <li class="item">
-                <a href="">
-                <div class="pop-up-container">
-                <img src="./img/portfolio/img-8.jpg" alt="Проект LAB">
-                </div>
-                <div class="card-content">
-                <h2 class="project-title">Проект LAB</h2>
-                <p>Маркетинг</p></div></a>
-            </li>
-            <li class="item">
-                <a href="">
-                <div class="pop-up-container">
-                <img src="./img/portfolio/img-9.jpg" alt="Growing Business">
-                </div>
-                <div class="card-content">
-                <h2 class="project-title">Growing Business</h2>
-                <p>Приложение</p></div></a>
-            </li>
-         </ul>
-        </div>
-      </section>
-    </main>
+        <!-- ссылки на социальные сети -->
+      <div class="footer-socials">
+        <b class="subtitle">присоединяйтесь</b>
+        <ul class="socials-list">
+          <li class="item">
+            <a href="https://www.instagram.com/" class="link" aria-label="логотип инстаграм">
+              <svg class="icon">
+                <use href="./img/svg/symbol-defs.svg#logo-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://twitter.com/" class="link" aria-label="логотип твиттер">
+              <svg class="icon">
+                <use href="./img/svg/symbol-defs.svg#logo-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://www.facebook.com/" class="link" aria-label="логотип фейсбук">
+              <svg class="icon">
+                <use href="./img/svg/symbol-defs.svg#logo-fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://www.linkedin.com" class="link" aria-label="логотип линкедин">
+              <svg class="icon">
+                <use href="./img/svg/symbol-defs.svg#logo-in"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+        <!-- форма подписки на рассылку -->
+        <div class="footer-mail">
+          <b class="subtitle">Подпишитесь на рассылку</b>
+          <form action="" class="form">
+            <input
+              type="email"
+              name="email"
+              class="footer-input"
+              placeholder="E-mail"
+              aria-label="форма подписки"
+            />
 
-             <!--footer container-->
-             <footer>
-                <div class="container">
-                    <div class="footer-wrapper">
-                        <div class="contacts-container">
-                        <a class="webstudio-link" href="./index.html" aria-label="WebStudio">
-                          <span class="web">Web<span class="footer-studio">Studio</span></span>
-                        </a>
-                        <address>
-                            <span class="address-text">г. Киев, пр-т Леси Украинки, 26</span>
-                            <ul>
-                                <li><a href="info@example.com">info@example.com</a></li>
-                                <li><a href="tel:+380961111111">+38 096 111 11 11</a></li>
-                            </ul>
-                        </address>
-                        </div>
-                        <div class="follow-us-container">
-                            <p>Присоединяйтесь</p>
-                            <ul class="footer-social-links">
-                                    <li><a href="">
-                                        <svg width="20" height="20">
-                                            <use href="./img/svg/sprite.svg#icon-instagram-footer"></use>
-                                        </svg>
-                                      </a></li>
-                                    <li><a href="">
-                                        <svg width="20" height="20">
-                                            <use href="./img/svg/sprite.svg#icon-twitter-footer"></use>
-                                        </svg>
-                                      </a></li>
-                                    <li><a href="">
-                                        <svg width="20" height="20">
-                                            <use href="./img/svg/sprite.svg#icon-facebook-footer"></use>
-                                        </svg>
-                                      </a></li>
-                                    <li><a href="">
-                                        <svg width="20" height="20">
-                                            <use href="./img/svg/sprite.svg#icon-linkedin-footer"></use>
-                                        </svg>
-                                      </a></li>
-                            </ul>
-                        </div>
-                        <div class="subscribe-container">
-                            <p>Подпишитесь на рассылку</p>
-                            <form action="#">
-                                <input type="email" name="user-email" placeholder="E-Mail">
-                                <button type="submit">Подписаться
-                                        <svg width="24" height="24">
-                                        <use href="./img/svg/sprite.svg#icon-send"></use></svg>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </body>
-        </html>
+            <button type="submit" class="primary-button submit-btn">
+              Подписаться
+              <svg class="button-icon">
+                <use href="./img/svg/symbol-defs.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+        <script src="./menu.js"></script>
+  </body>
+</html>

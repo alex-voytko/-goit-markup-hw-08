@@ -1,0 +1,41 @@
+@media screen and (max-width: 767px) {
+  .menu-btn {
+    display: inline-flex;
+    padding: 0;
+    color: $title-text-color;
+    background-color: $main-white-color;
+    background-origin: border-box;
+    border: none;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+
+    & .open-icon {
+      display: block;
+    }
+
+    & .close-icon {
+      display: none;
+    }
+  }
+
+  .menu-icon {
+    fill: currentColor;
+  }
+
+  .menu-btn.is-open .open-icon {
+    display: none;
+  }
+
+  .menu-btn.is-open .close-icon {
+    display: block;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .menu-btn {
+    display: none;
+  }
+}

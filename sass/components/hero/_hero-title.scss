@@ -1,0 +1,23 @@
+.hero-title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $main-white-color;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media screen and (max-width: 1199px) {
+    max-width: 360px;
+    font-size: 26px;
+    line-height: 1.62;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}

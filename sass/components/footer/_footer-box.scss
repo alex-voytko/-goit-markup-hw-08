@@ -1,0 +1,35 @@
+footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: $main-white-color;
+  background-color: $footer-bg-color;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.footer-box {
+  display: block;
+
+  & .subtitle {
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .footer-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .footer-box {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    // align-items: baseline;
+  }
+}
