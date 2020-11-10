@@ -98,6 +98,7 @@ ul {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 100%;
   }
 }
 
@@ -259,7 +260,7 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
-  .menu-button .menu-button {
+  .menu-button {
     display: none;
   }
 }

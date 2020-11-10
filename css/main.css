@@ -98,6 +98,7 @@ ul {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 100%;
   }
 }
 
@@ -259,7 +260,7 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
-  .menu-button .menu-button {
+  .menu-button {
     display: none;
   }
 }
@@ -357,7 +358,7 @@ ul {
   fill: #2196F3;
 }
 
-.backdrop .modal h2 {
+.modal-title {
   margin-bottom: 12px;
   font-style: normal;
   font-weight: 700;
@@ -368,12 +369,12 @@ ul {
   color: #212121;
 }
 
-.backdrop .modal form .form-field {
+form .form-field {
   position: relative;
   margin-bottom: 10px;
 }
 
-.backdrop .modal form .form-field .input-field {
+form .form-field .input-field {
   display: block;
   width: 100%;
   height: 40px;
@@ -384,22 +385,22 @@ ul {
   border-radius: 4px;
 }
 
-.backdrop .modal form .form-field .input-field:focus {
+form .form-field .input-field:focus {
   outline: none;
   border-color: #2196F3;
 }
 
-.backdrop .modal form .form-field .input-field:focus + svg {
+form .form-field .input-field:focus + svg {
   fill: #2196F3;
 }
 
-.backdrop .modal form .form-field svg {
+form .form-field svg {
   position: absolute;
   top: 50%;
   left: 12px;
 }
 
-.backdrop .modal form .label {
+form .label {
   display: block;
   margin-bottom: 4px;
   font-style: normal;
@@ -410,7 +411,7 @@ ul {
   color: #757575;
 }
 
-.backdrop .modal form textarea {
+form textarea {
   display: block;
   width: 100%;
   height: 120px;
@@ -423,12 +424,12 @@ ul {
   border-radius: 4px;
 }
 
-.backdrop .modal form textarea:focus {
+form textarea:focus {
   outline: none;
   border-color: #2196F3;
 }
 
-.backdrop .modal form textarea::-webkit-input-placeholder {
+form textarea::-webkit-input-placeholder {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -437,7 +438,7 @@ ul {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.backdrop .modal form textarea:-ms-input-placeholder {
+form textarea:-ms-input-placeholder {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -446,7 +447,7 @@ ul {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.backdrop .modal form textarea::-ms-input-placeholder {
+form textarea::-ms-input-placeholder {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -455,7 +456,7 @@ ul {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.backdrop .modal form textarea::placeholder {
+form textarea::placeholder {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -464,7 +465,7 @@ ul {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.backdrop .modal form .checkbox-container {
+form .checkbox-container {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -474,7 +475,7 @@ ul {
           justify-content: center;
 }
 
-.backdrop .modal form .checkbox-container .checkbox {
+form .checkbox-container .checkbox {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -489,13 +490,13 @@ ul {
   background-repeat: no-repeat;
 }
 
-.backdrop .modal form .checkbox-container .checkbox:checked {
+form .checkbox-container .checkbox:checked {
   outline: none;
   background-color: #2196F3;
   border: 2px solid #2196F3;
 }
 
-.backdrop .modal form .checkbox-container .label {
+form .checkbox-container .label {
   display: inline-block;
   margin-left: 8.38px;
   font-style: normal;
@@ -506,13 +507,13 @@ ul {
   color: #757575;
 }
 
-.backdrop .modal form .checkbox-container .label .link {
+form .checkbox-container .label .link {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #2196F3;
 }
 
-.backdrop .modal form .send-button {
+form .send-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
