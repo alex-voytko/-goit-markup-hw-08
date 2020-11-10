@@ -1,15 +1,8 @@
-
-// utils:
-@import "./utils/variables";
-
-// base:
-@import "./base/common";
-@import "./base/container";
-
-// components:
-@import "./components/header/header";
-@import "./components/header/header-portfolio";
-@import "./components/filter";
-@import "./components/projects-list";
-@import "./components/general-styles";
-@import "./components/footer"
+@import "./base/normalize";
+@import "./utils/vars";
+@import "./utils/breakpoints";
+@import "./utils/common";
+@import "./utils/visuallyhidden";
+@import "./components/header/header-sec";
+@import "./components/portfolio/port-sec";
+@import "./components/footer/footer-sec";

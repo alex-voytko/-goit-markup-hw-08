@@ -1,31 +1,41 @@
-.menu-button{
-  @media screen and (max-width: 767px) {
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  background-origin: border-box;
-  border: none;
-  &:hover svg,
-  &:focus svg{
-    fill: $accent-color;
-  }
-  & .icon-menu{
-    display: block;
-  }
-  & .icon-close-menu{
-    display: none;
-  }
-  &.is-open .icon-menu {
-    display: none;
-  }
-  &.is-open .icon-close-menu {
-    display: block;
-  }
-}
-}
-.menu-button {
-    @media screen and (min-width: 768px) {
-    display: none;
+@media screen and (max-width: 767px) {
+  .menu-btn {
+    display: inline-flex;
+    padding: 0;
+    color: $title-text-color;
+    background-color: $main-white-color;
+    background-origin: border-box;
+    border: none;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+
+    & .open-icon {
+      display: block;
+    }
+
+    & .close-icon {
+      display: none;
     }
   }
+
+  .menu-icon {
+    fill: currentColor;
+  }
+
+  .menu-btn.is-open .open-icon {
+    display: none;
+  }
+
+  .menu-btn.is-open .close-icon {
+    display: block;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .menu-btn {
+    display: none;
+  }
+}
